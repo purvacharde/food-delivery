@@ -55,7 +55,7 @@ Payment Gateway
  Stripe
 
 Deployment
-Render / Railway (Frontend-Backend)
+Render / Render(Frontend-Backend)
 
 📁 Folder Structure
 food-delivery-app/
