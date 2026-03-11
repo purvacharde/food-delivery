@@ -14,8 +14,6 @@ This is a MERN Stack based food ordering platform where users can:
 8.View all orders
 9.Update order status
 
-🚀 Live Demo
-Render:https://food-delivery-frontend-52of.onrender.com
 
 ✨ Features
 👤 User Features
@@ -88,7 +86,7 @@ food-delivery-app/
     🔐 Environment Variables
 Create a .env file inside the backend folder and add:
 
-PORT=4000
+PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 STRIPE_SECRET_KEY=your_stripe_secret_key
@@ -96,7 +94,7 @@ FRONTEND_URL=http://localhost:5173
 
 💻 Run Locally
 1️⃣ Clone the Repository
-git clone https://github.com/Ishaa555/food-delivery.git
+git clone https://github.com/purvacharde/food-delivery.git
 cd food-delivery-app
 
 2️⃣ Backend Setup
@@ -105,7 +103,7 @@ npm install
 npm run server
 
 Server runs on:
-http://localhost:4000
+http://localhost:5000
 
 3️⃣ Frontend Setup
 cd frontend
@@ -126,11 +124,6 @@ This project was built for:
 2.Understanding MERN Architecture
 3.Integrating Payment Gateway
 4.Building Real-world E-commerce System
-
-👩‍💻 Author
-INDERANEELA SARKAR
-GitHub: https://github.com/Ishaa555
-project:Food-Delivery-App
 
 
 

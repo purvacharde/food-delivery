@@ -151,4 +151,23 @@ const updateStatus = async (req,res) => {
 
 }
 
-export { placeOrder,verifyOrder,userOrders,listOrders,updateStatus };
+// Remove order by ID
+const removeOrder = async (req, res) => {
+  try {
+    const { orderId } = req.body;
+    
+    // Verify the user owns this order or is admin
+    const order = await orderModel.findById(orderId);
+    if (!order) {
+      return res.json({success:false,message:'Order not found'});
+    }
+    
+    await orderModel.findByIdAndDelete(orderId);
+    res.json({success:true,message:'Order Removed'})
+  }catch (error) {
+    console.log(error);
+    res.json({success:false,message:'Error'})
+  }
+}
+
+export { placeOrder,verifyOrder,userOrders,listOrders,updateStatus,removeOrder };

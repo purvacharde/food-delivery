@@ -33,12 +33,38 @@ const Orders = ({url}) => {
 
   }
 
+  const removeAllOrders = async () => {
+    if (orders.length === 0) {
+      toast.error('No orders to remove');
+      return;
+    }
+    
+    if (window.confirm('Are you sure you want to remove all orders?')) {
+      try {
+        for (const order of orders) {
+          await axios.post(url+'/api/order/admin/remove', { orderId: order._id });
+        }
+        setOrders([]);
+        toast.success('All orders removed');
+      } catch (error) {
+        toast.error('Error removing orders');
+      }
+    }
+  }
+
   useEffect(()=>{
     fetchAllOrders();
   },[])
   return (
     <div className='order add'>
-      <h3>Order Page</h3>
+      <div className="order-header">
+        <h3>Order Page</h3>
+        {orders.length > 0 && (
+          <button onClick={removeAllOrders} className="remove-all-btn">
+            Remove All Orders
+          </button>
+        )}
+      </div>
       <div className="order-list">
         {orders.map((order,index)=>(
           <div key={index} className='order-item'>
@@ -77,3 +103,4 @@ const Orders = ({url}) => {
 }
 
 export default Orders
+

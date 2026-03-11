@@ -26,6 +26,23 @@
     padding: 10px;
     outline: none;
 }
+.order-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.remove-all-btn{
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.remove-all-btn:hover{
+    background-color: #ff3333;
+}
 @media (max-width:1000px) {
     .order-item{
         font-size: 12px;
