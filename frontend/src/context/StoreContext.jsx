@@ -9,7 +9,7 @@ const StoreContextProvider = (props) => {
     const [food_list, setFoodList] = useState([]);
     const [token, setToken] = useState("");
 
-    const url = "http://localhost:5000";
+    const url = "food-delivery-production-9bbb.up.railway.app";
 
     // ================= ADD TO CART =================
     const addToCart = async (itemId) => {
