@@ -6,11 +6,12 @@ import Add from './pages/Add/Add'
 import Orders from './pages/Orders/Orders'
 import List from './pages/List/List'
 import { ToastContainer} from 'react-toastify';
-//import 'react-toastify/dist/ReactTostify.css';
+// import 'react-toastify/dist/ReactTostify.css';
 
 const App = () => {
 
 const url = "food-delivery-production-9bbb.up.railway.app"
+// const url = "http://localhost:5000"
   return (
     <div>
       <ToastContainer/>
